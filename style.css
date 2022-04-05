@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(
+    120deg,
+    #e2c35d,
+    #d88771
+  );
+  /* color: white; */
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  width: 100%;
+}
+header {
+  font-size: 2rem;
+  color: white;
+}
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  font-size: 2rem;
+  border: none;
+  padding: 0.5rem;
+  background: white;
+  outline: none;
+}
+form input {
+  min-width: 35%;
+}
+form i {
+  color: #d88771;
+}
+form button:hover,
+form button:hover * {
+  background-color: #d88771;
+  color: white;
+  cursor: pointer;
+}
+.todo-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list {
+  min-width: 60%;
+  list-style: none;
+}
+.todo-list .todo {
+  background-color: white;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo {
+  transition: all 0.5s ease;
+}
+.todo li {
+  flex-grow: 1;
+  color: black;
+}
+.todo button {
+  font-size: 2rem;
+  border: none;
+  padding: 0.5rem;
+  color: white;
+  background-color: #d88771;
+}
+.todo button > i {
+  pointer-events: none;
+}
+.todo button.done {
+  background-color: rgb(3, 153, 3);
+}
+.todo button:hover {
+  cursor: pointer;
+}
+
+.fall {
+  transform: translateY(20px) rotateZ(20deg);
+  opacity: 0;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+.selection {
+  position: relative;
+  margin: 1rem;
+  overflow: hidden;
+}
+select {
+  width: 10rem;
+  cursor: pointer;
+  color: #d88771;
+  padding: 1rem;
+}
+
+.selection::after {
+  content: '\25BC';
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #d88771;
+  padding: 1rem;
+  color: white;
+  /* transition: all 0.2s ease; */
+  pointer-events: none;
+}
+.complete {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
